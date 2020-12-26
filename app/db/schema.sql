@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS raffle_db;
+CREATE DATABASE raffle_db;

@@ -1,6 +1,6 @@
 $.get("/api/all", function(results) {
     if (results.length !== 0) {
-        console.log(results);
+        $("#list-count").append(results.length+" total tickets");
         for (i=0;i<results.length;i++){
             var listItem = $("<li>");
             var editButton = $("<button class='edit-button'>Edit</button>")
@@ -10,7 +10,7 @@ $.get("/api/all", function(results) {
             listItem.append(editButton);
             $("#username-list").append(listItem);
         };
+    } else {
+        $("#list-count").append("no active raffle submissions.");
     }
-
-    $("#list-count").append(results.length+" total tickets");
 });

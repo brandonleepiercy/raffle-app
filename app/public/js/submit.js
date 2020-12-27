@@ -21,7 +21,9 @@ $("#submit-button").on("click", function(event) {
                     };
                     $.post("/api/new", newTicket).then(function() {
                         console.log(newTicket.user+" successfully added");
-                    })
+                        $("#diditsubmit").text(newTicket.user+" saved successfully! Good luck!!");
+                    });
+                    $("#user").val("");
                 }
             })
         }

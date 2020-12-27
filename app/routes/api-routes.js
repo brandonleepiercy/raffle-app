@@ -7,6 +7,16 @@ module.exports = function(app) {
         });
     });
 
+    app.get("/api/:user", function(req,res) {
+        Ticket.findAll({
+            where: {
+                user:req.params.user
+            }
+        }).then(function(results) {
+            res.json(results);
+        });
+    });
+
     app.post("/api/new", function(req,res) {
         console.log("New ticket created, user: ");
         console.log(req.body.user);

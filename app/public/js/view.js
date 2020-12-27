@@ -11,4 +11,6 @@ $.get("/api/all", function(results) {
             $("#username-list").append(listItem);
         };
     }
-})
+
+    $("#list-count").append(results.length+" total tickets");
+});

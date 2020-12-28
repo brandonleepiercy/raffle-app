@@ -17,8 +17,13 @@ This is a lightweight javascript/mysql application that can help an individual/o
 - [Questions](#questions)
 
 ## Installation
+    1. Setup the MySQL server. Copy the contents of 'app/db/schema.sql' into MySQL Workbench, and run the code. This will establish the MySQL server on your machine. NOTE: The settings in 'app/config/connection.js' will have to be updated to reflect your settings.
 
-Type "npm i" into CMD to install the neccesary packages for this repository.
+    2. Type "npm i" into CMD to install the neccesary packages for this repository.
+
+    3. Type "node server.js" in into the terminal in the root directory of the repo to spin the server.
+
+    4. Unless PORT altered, it should spin at PORT:7777, locally.
 
 ## Usage
 
